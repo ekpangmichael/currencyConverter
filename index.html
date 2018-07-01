@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="theme-color" content="#3f51b5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="msapplication-TileImage" content="img/icons/homescreen192.png">
+  <meta name="msapplication-TileColor" content="#fff">
+  <!-- Opera Speed Dial Favicon -->
+  <link rel="icon" type="image/png" href="img/icons/homescreen192.png" />
+  <!-- For iPhone 4 Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/icons/homescreen192.png">
+  <!-- For iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/icons/homescreen192.png">
+  <!-- For iPhone: -->
+  <link rel="apple-touch-icon-precomposed" href="img/icons/homescreen192.png">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Glegoo' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/flags.css">
+  <link rel="stylesheet" href="css/select2.css">
+  <link rel="manifest" href="manifest.json">
+ 
+  <title>Currency Converter</title>
+</head>
+<body id="home">
+  <script>
+    function FocusOnInput()
+      {
+        document.getElementById("camount").focus();
+      }
+    </script>
+  <div id="header">
+    <div id="header-content">
+     <h1 id="logo"><a href="index.html"></a></h1>
+      <div id="social">
+      </div>
+      <h1>Currency Converter</h1>
+      <center><h1 id="result"></h1></center>
+      <div id="converter">
+      
+          <input type="number" id="camount" name="camount" size="6" min="0" step="any" autofocus>
+          <select id="cfrom" name="cfrom" class="cform">
+            <option value="AFN" data-iso="AF"><span>AFN</span> - Afghan afghani</option>
+            <option value="XCD" data-iso="AI"><span>XCD</span> - East Caribbean dollar</option>
+            <option value="AUD" data-iso="AU"><span>AUD</span> - Australian dollar</option>
+            <option value="BDT" data-iso="BD"><span>BDT</span> - Bangladeshi taka</option>
+            <option value="XOF" data-iso="BJ"><span>XOF</span> - West African CFA franc</option>
+            <option value="BRL" data-iso="BR"><span>BRL</span> - Brazilian real</option>
+            <option value="KHR" data-iso="KH"><span>KHR</span> - Cambodian riel</option>
+            <option value="XAF" data-iso="TD"><span>XAF</span> - Central African CFA franc</option>
+            <option value="XAF" data-iso="CG"><span>XAF</span> - Central African CFA franc</option>
+            <option value="CUP" data-iso="CU"><span>CUP</span> - Cuban peso</option>
+            <option value="XCD" data-iso="DM"><span>XCD</span> - East Caribbean dollar</option>
+            <option value="EUR" data-iso="FI"><span>EUR</span> - European euro</option>
+            <option value="GEL" data-iso="GE"><span>GEL</span> - Georgian lari</option>
+            <option value="XCD" data-iso="GD"><span>XCD</span> - East Caribbean dollar</option>
+            <option value="HTG" data-iso="HT"><span>HTG</span> - Haitian gourde</option>
+            <option value="INR" data-iso="IN"><span>INR</span> - Indian rupee</option>
+            <option value="ILS" data-iso="IL"><span>ILS</span> - Israeli new sheqel</option>
+            <option value="KZT" data-iso="KZ"><span>KZT</span> - Kazakhstani tenge</option>
+            <option value="KWD" data-iso="KW"><span>KWD</span> - Kuwaiti dinar</option>
+            <option value="LSL" data-iso="LS"><span>LSL</span> - Lesotho loti</option>
+            <option value="EUR" data-iso="LU"><span>EUR</span> - European euro</option>
+            <option value="MYR" data-iso="MY"><span>MYR</span> - Malaysian ringgit</option>
+            <option value="MUR" data-iso="MU"><span>MUR</span> - Mauritian rupee</option>
+            <option value="MNT" data-iso="MN"><span>MNT</span> - Mongolian tugrik</option>
+            <option value="MMK" data-iso="MM"><span>MMK</span> - Myanma kyat</option>
+            <option value="XPF" data-iso="NC"><span>XPF</span> - CFP franc</option>
+            <option value="NOK" data-iso="NO"><span>NOK</span> - Norwegian krone</option>
+            <option value="PGK" data-iso="PG"><span>PGK</span> - Papua New Guinean kina</option>
+            <option value="EUR" data-iso="PT"><span>EUR</span> - European euro</option>
+            <option value="RWF" data-iso="RW"><span>RWF</span> - Rwandan franc</option>
+            <option value="WST" data-iso="WS"><span>WST</span> - Samoan tala</option>
+            <option value="RSD" data-iso="RS"><span>RSD</span> - Serbian dinar</option>
+            <option value="EUR" data-iso="SI"><span>EUR</span> - European euro</option>
+            <option value="EUR" data-iso="ES"><span>EUR</span> - European euro</option>
+            <option value="SEK" data-iso="SE"><span>SEK</span> - Swedish krona</option>
+            <option value="TZS" data-iso="TZ"><span>TZS</span> - Tanzanian shilling</option>
+            <option value="TND" data-iso="TN"><span>TND</span> - Tunisian dinar</option>
+            <option value="UAH" data-iso="UA"><span>UAH</span> - Ukrainian hryvnia</option>
+            <option value="UZS" data-iso="UZ"><span>UZS</span> - Uzbekistani som</option>
+            <option value="YER" data-iso="YE"><span>YER</span> - Yemeni rial</option>
+            <option value="DZD" data-iso="DZ"><span>DZD</span> - Algerian dinar</option>
+            <option value="ARS" data-iso="AR"><span>ARS</span> - Argentine peso</option>
+            <option value="AZN" data-iso="AZ"><span>AZN</span> - Azerbaijani manat</option>
+            <option value="BYN" data-iso="BY"><span>BYN</span> - New Belarusian ruble</option>
+            <option value="BOB" data-iso="BO"><span>BOB</span> - Bolivian boliviano</option>
+            <option value="BGN" data-iso="BG"><span>BGN</span> - Bulgarian lev</option>
+            <option value="CAD" data-iso="CA"><span>CAD</span> - Canadian dollar</option>
+            <option value="CNY" data-iso="CN"><span>CNY</span> - Chinese renminbi</option>
+            <option value="CRC" data-iso="CR"><span>CRC</span> - Costa Rican colon</option>
+            <option value="CZK" data-iso="CZ"><span>CZK</span> - Czech koruna</option>
+            <option value="USD" data-iso="EC" selected><span>USD</span> - U.S. Dollar</option>
+            <option value="EUR" data-iso="EE"><span>EUR</span> - European euro</option>
+            <option value="XPF" data-iso="PF"><span>XPF</span> - CFP franc</option>
+            <option value="GHS" data-iso="GH"><span>GHS</span> - Ghanaian cedi</option>
+            <option value="GNF" data-iso="GN"><span>GNF</span> - Guinean franc</option>
+            <option value="HKD" data-iso="HK"><span>HKD</span> - Hong Kong dollar</option>
+            <option value="IRR" data-iso="IR"><span>IRR</span> - Iranian rial</option>
+            <option value="JMD" data-iso="JM"><span>JMD</span> - Jamaican dollar</option>
+            <option value="AUD" data-iso="KI"><span>AUD</span> - Australian dollar</option>
+            <option value="LAK" data-iso="LA"><span>LAK</span> - Lao kip</option>
+            <option value="LYD" data-iso="LY"><span>LYD</span> - Libyan dinar</option>
+            <option value="MKD" data-iso="MK"><span>MKD</span> - Macedonian denar</option>
+            <option value="XOF" data-iso="ML"><span>XOF</span> - West African CFA franc</option>
+            <option value="USD" data-iso="FM"><span>USD</span> - U.S. Dollar</option>
+            <option value="XCD" data-iso="MS"><span>XCD</span> - East Caribbean dollar</option>
+            <option value="AUD" data-iso="NR"><span>AUD</span> - Australian dollar</option>
+            <option value="NIO" data-iso="NI"><span>NIO</span> - Nicaraguan cordoba</option>
+            <option value="PKR" data-iso="PK"><span>PKR</span> - Pakistani rupee</option>
+            <option value="PEN" data-iso="PE"><span>PEN</span> - Peruvian nuevo sol</option>
+            <option value="QAR" data-iso="QA"><span>QAR</span> - Qatari riyal</option>
+            <option value="XCD" data-iso="KN"><span>XCD</span> - East Caribbean dollar</option>
+            <option value="STD" data-iso="ST"><span>STD</span> - Sao Tome and Principe dobra</option>
+            <option value="SLL" data-iso="SL"><span>SLL</span> - Sierra Leonean leone</option>
+            <option value="SOS" data-iso="SO"><span>SOS</span> - Somali shilling</option>
+            <option value="SDG" data-iso="SD"><span>SDG</span> - Sudanese pound</option>
+            <option value="SYP" data-iso="SY"><span>SYP</span> - Syrian pound</option>
+            <option value="XOF" data-iso="TG"><span>XOF</span> - West African CFA franc</option>
+            <option value="TMT" data-iso="TM"><span>TMT</span> - Turkmenistan manat</option>
+            <option value="GBP" data-iso="GB"><span>GBP</span> - British pound</option>
+            <option value="VEF" data-iso="VE"><span>VEF</span> - Venezuelan bolivar</option>
+            <option value="EUR" data-iso="AD"><span>EUR</span> - European euro</option>
+            <option value="AMD" data-iso="AM"><span>AMD</span> - Armenian dram</option>
+            <option value="BSD" data-iso="BS"><span>BSD</span> - Bahamian dollar</option>
+            <option value="EUR" data-iso="BE"><span>EUR</span> - European euro</option>
+            <option value="BAM" data-iso="BA"><span>BAM</span> - Bosnia and Herzegovina konvertibilna marka</option>
+            <option value="XOF" data-iso="BF"><span>XOF</span> - West African CFA franc</option>
+            <option value="KYD" data-iso="KY"><span>KYD</span> - Cayman Islands dollar</option>
+              <option value="COP" data-iso="CO"><span>COP</span> - Colombian peso</option>
+            <option value="XOF" data-iso="CI"><span>XOF</span> - West African CFA franc</option>
+             <option value="DKK" data-iso="DK"><span>DKK</span> - Danish krone</option>
+             <option value="EGP" data-iso="EG"><span>EGP</span> - Egyptian pound</option>
+             <option value="ETB" data-iso="ET"><span>ETB</span> - Ethiopian birr</option>
+             <option value="XAF" data-iso="GA"><span>XAF</span> - Central African CFA franc</option>
+             <option value="GIP" data-iso="GI"><span>GIP</span> - Gibraltar pound</option>
+             <option value="XOF" data-iso="GW"><span>XOF</span> - West African CFA franc</option>
+             <option value="HUF" data-iso="HU"><span>HUF</span> - Hungarian forint</option>
+             <option value="IQD" data-iso="IQ"><span>IQD</span> - Iraqi dinar</option>
+             <option value="JPY" data-iso="JP"><span>JPY</span> - Japanese yen</option>
+             <option value="KPW" data-iso="KP"><span>KPW</span> - North Korean won</option>
+             <option value="LVL" data-iso="LV"><span>LVL</span> - Latvian lats</option>
+             <option value="CHF" data-iso="LI"><span>CHF</span> - Swiss Franc</option>
+             <option value="MGA" data-iso="MG"><span>MGA</span> - Malagasy ariary</option>
+             <option value="EUR" data-iso="MT"><span>EUR</span> - European Euro</option>
+             <option value="MDL" data-iso="MD"><span>MDL</span> - Moldovan leu</option>
+             <option value="MAD" data-iso="MA"><span>MAD</span> - Moroccan dirham</option>
+             <option value="NPR" data-iso="NP"><span>NPR</span> - Nepalese rupee</option>
+             <option value="XOF" data-iso="NE"><span>XOF</span> - West African CFA franc</option>
+             <option value="USD" data-iso="PW"><span>USD</span> - U.S. Dollar</option>
+             <option value="PHP" data-iso="PH"><span>PHP</span> - Philippine peso</option>
+             <option value="RON" data-iso="RO"><span>RON</span> - Romanian leu</option>
+             <option value="XCD" data-iso="LC"><span>XCD</span> - East Caribbean dollar</option>
+             <option value="SAR" data-iso="SA"><span>SAR</span> - Saudi riyal</option>
+             <option value="SGD" data-iso="SG"><span>SGD</span> - Singapore dollar</option>
+             <option value="ZAR" data-iso="ZA"><span>ZAR</span> - South African rand</option>
+             <option value="SRD" data-iso="SR"><span>SRD</span> - Surinamese dollar</option>
+             <option value="TWD" data-iso="TW"><span>TWD</span> - New Taiwan dollar</option>
+             <option value="TOP" data-iso="TO"><span>TOP</span> - Paanga</option>
+             <option value="AUD" data-iso="TV"><span>AUD</span> - Australian dollar</option>
+             <option value="USD" data-iso="US"><span>USD</span> - United States dollar</option>
+             <option value="VND" data-iso="VN"><span>VND</span> - Vietnamese dong</option>
+             <option value="ALL" data-iso="AL"><span>ALL</span> - Albanian lek</option>
+             <option value="XCD" data-iso="AG"><span>XCD</span> - East Caribbean dollar</option>
+             <option value="EUR" data-iso="AT"><span>EUR</span> - European euro</option>
+             <option value="BBD" data-iso="BB"><span>BBD</span> - Barbadian dollar</option>
+             <option value="BTN" data-iso="BT"><span>BTN</span> - Bhutanese ngultrum</option>
+             <option value="BND" data-iso="BN"><span>BND</span> - Brunei dollar</option>
+             <option value="XAF" data-iso="CM"><span>XAF</span> - Central African CFA franc</option>
+             <option value="CLP" data-iso="CL"><span>CLP</span> - Chilean peso</option>
+             <option value="CDF" data-iso="CD"><span>CDF</span> - Congolese franc</option>
+             <option value="EUR" data-iso="CY"><span>EUR</span> - European euro</option>
+             <option value="DOP" data-iso="DO"><span>DOP</span> - Dominican peso</option>
+             <option value="ERN" data-iso="ER"><span>ERN</span> - Eritrean nakfa</option>
+             <option value="EUR" data-iso="FR"><span>EUR</span> - European euro</option>
+             <option value="EUR" data-iso="DE"><span>EUR</span> - European euro</option>
+             <option value="GTQ" data-iso="GT"><span>GTQ</span> - Guatemalan quetzal</option>
+             <option value="HNL" data-iso="HN"><span>HNL</span> - Honduran lempira</option>
+             <option value="IDR" data-iso="ID"><span>IDR</span> - Indonesian rupiah</option>
+             <option value="EUR" data-iso="IT"><span>EUR</span> - European euro</option>
+             <option value="KES" data-iso="KE"><span>KES</span> - Kenyan shilling</option>
+             <option value="KGS" data-iso="KG"><span>KGS</span> - Kyrgyzstani som</option>
+             <option value="LRD" data-iso="LR"><span>LRD</span> - Liberian dollar</option>
+             <option value="MOP" data-iso="MO"><span>MOP</span> - Macanese pataca</option>
+             <option value="MVR" data-iso="MV"><span>MVR</span> - Maldivian rufiyaa</option>
+             <option value="MXN" data-iso="MX"><span>MXN</span> - Mexican peso</option>
+             <option value="EUR" data-iso="ME"><span>EUR</span> - European Euro</option>
+             <option value="NAD" data-iso="NA"><span>NAD</span> - Namibian dollar</option>
+             <option value="NZD" data-iso="NZ"><span>NZD</span> - New Zealand dollar</option>
+             <option value="OMR" data-iso="OM"><span>OMR</span> - Omani rial</option>
+             <option value="PYG" data-iso="PY"><span>PYG</span> - Paraguayan guarani</option>
+             <option value="USD" data-iso="PR"><span>USD</span> - U.S. Dollar</option>
+             <option value="SHP" data-iso="SH"><span>SHP</span> - Saint Helena pound</option>
+             <option value="EUR" data-iso="SM"><span>EUR</span> - European euro</option>
+             <option value="SCR" data-iso="SC"><span>SCR</span> - Seychellois rupee</option>
+             <option value="SBD" data-iso="SB"><span>SBD</span> - Solomon Islands dollar</option>
+             <option value="LKR" data-iso="LK"><span>LKR</span> - Sri Lankan rupee</option>
+             <option value="CHF" data-iso="CH"><span>CHF</span> - Swiss franc</option>
+             <option value="THB" data-iso="TH"><span>THB</span> - Thai baht</option>
+             <option value="TRY" data-iso="TR"><span>TRY</span> - Turkish new lira</option>
+             <option value="AED" data-iso="AE"><span>AED</span> - UAE dirham</option>
+             <option value="VUV" data-iso="VU"><span>VUV</span> - Vanuatu vatu</option>
+             <option value="ZMW" data-iso="ZM"><span>ZMW</span> - Zambian kwacha</option>
+             <option value="AOA" data-iso="AO"><span>AOA</span> - Angolan kwanza</option>
+             <option value="AWG" data-iso="AW"><span>AWG</span> - Aruban florin</option>
+             <option value="BHD" data-iso="BH"><span>BHD</span> - Bahraini dinar</option>
+             <option value="BZD" data-iso="BZ"><span>BZD</span> - Belize dollar</option>
+             <option value="BWP" data-iso="BW"><span>BWP</span> - Botswana pula</option>
+             <option value="BIF" data-iso="BI"><span>BIF</span> - Burundi franc</option>
+             <option value="XAF" data-iso="CF"><span>XAF</span> - Central African CFA franc</option>
+             <option value="KMF" data-iso="KM"><span>KMF</span> - Comorian franc</option>
+             <option value="HRK" data-iso="HR"><span>HRK</span> - Croatian kuna</option>
+             <option value="DJF" data-iso="DJ"><span>DJF</span> - Djiboutian franc</option>
+             <option value="USD" data-iso="SV"><span>USD</span> - U.S. Dollar</option>
+             <option value="FJD" data-iso="FJ"><span>FJD</span> - Fijian dollar</option>
+             <option value="GMD" data-iso="GM"><span>GMD</span> - Gambian dalasi</option>
+             <option value="EUR" data-iso="GR"><span>EUR</span> - European euro</option>
+             <option value="GYD" data-iso="GY"><span>GYD</span> - Guyanese dollar</option>
+             <option value="ISK" data-iso="IS"><span>ISK</span> - Icelandic króna</option>
+             <option value="EUR" data-iso="IE"><span>EUR</span> - European euro</option>
+             <option value="JOD" data-iso="JO"><span>JOD</span> - Jordanian dinar</option>
+             <option value="KRW" data-iso="KR"><span>KRW</span> - South Korean won</option>
+             <option value="LBP" data-iso="LB"><span>LBP</span> - Lebanese lira</option>
+             <option value="MWK" data-iso="MW"><span>MWK</span> - Malawian kwacha</option>
+             <option value="MRO" data-iso="MR"><span>MRO</span> - Mauritanian ouguiya</option>
+             <option value="EUR" data-iso="MC"><span>EUR</span> - European Euro</option>
+             <option value="MZN" data-iso="MZ"><span>MZN</span> - Mozambican metical</option>
+             <option value="EUR" data-iso="NL"><span>EUR</span> - European euro</option>
+             <option value="NGN" data-iso="NG" selected><span>NGN</span> - Nigerian naira</option>
+             <option value="PAB" data-iso="PA"><span>PAB</span> - Panamanian balboa</option>
+             <option value="PLN" data-iso="PL"><span>PLN</span> - Polish zloty</option>
+             <option value="RUB" data-iso="RU"><span>RUB</span> - Russian ruble</option>
+             <option value="XCD" data-iso="VC"><span>XCD</span> - East Caribbean dollar</option>
+             <option value="XOF" data-iso="SN"><span>XOF</span> - West African CFA franc</option>
+             <option value="EUR" data-iso="SK"><span>EUR</span> - European euro</option>
+             <option value="SDG" data-iso="SS"><span>SDG</span> - Sudanese pound</option>
+             <option value="SZL" data-iso="SZ"><span>SZL</span> - Swazi lilangeni</option>
+             <option value="TJS" data-iso="TJ"><span>TJS</span> - Tajikistani somoni</option>
+             <option value="TTD" data-iso="TT"><span>TTD</span> - Trinidad and Tobago dollar</option>
+             <option value="UGX" data-iso="UG"><span>UGX</span> - Ugandan shilling</option>
+             <option value="UYU" data-iso="UY"><span>UYU</span> - Uruguayan peso</option>
+             <option value="XPF" data-iso="WF"><span>XPF</span> - CFP franc</option>
+             <option value="EUR" data-iso="LT"><span>EUR</span> - European euro</option>
+            
+          </select>
+          <span id="switch">→</span>
+          <select id="cto" name="cto">
+            <option value="AFN" data-iso="AF"><span>AFN</span> - Afghan afghani</option>
+            <option value="XCD" data-iso="AI"><span>XCD</span> - East Caribbean dollar</option>
+            <option value="AUD" data-iso="AU"><span>AUD</span> - Australian dollar</option>
+            <option value="BDT" data-iso="BD"><span>BDT</span> - Bangladeshi taka</option>
+            <option value="XOF" data-iso="BJ"><span>XOF</span> - West African CFA franc</option>
+            <option value="BRL" data-iso="BR"><span>BRL</span> - Brazilian real</option>
+            <option value="KHR" data-iso="KH"><span>KHR</span> - Cambodian riel</option>
+            <option value="XAF" data-iso="TD"><span>XAF</span> - Central African CFA franc</option>
+            <option value="XAF" data-iso="CG"><span>XAF</span> - Central African CFA franc</option>
+            <option value="CUP" data-iso="CU"><span>CUP</span> - Cuban peso</option>
+            <option value="XCD" data-iso="DM"><span>XCD</span> - East Caribbean dollar</option>
+            <option value="EUR" data-iso="FI"><span>EUR</span> - European euro</option>
+            <option value="GEL" data-iso="GE"><span>GEL</span> - Georgian lari</option>
+            <option value="XCD" data-iso="GD"><span>XCD</span> - East Caribbean dollar</option>
+            <option value="HTG" data-iso="HT"><span>HTG</span> - Haitian gourde</option>
+            <option value="INR" data-iso="IN"><span>INR</span> - Indian rupee</option>
+            <option value="ILS" data-iso="IL"><span>ILS</span> - Israeli new sheqel</option>
+            <option value="KZT" data-iso="KZ"><span>KZT</span> - Kazakhstani tenge</option>
+            <option value="KWD" data-iso="KW"><span>KWD</span> - Kuwaiti dinar</option>
+            <option value="LSL" data-iso="LS"><span>LSL</span> - Lesotho loti</option>
+            <option value="EUR" data-iso="LU"><span>EUR</span> - European euro</option>
+            <option value="MYR" data-iso="MY"><span>MYR</span> - Malaysian ringgit</option>
+            <option value="MUR" data-iso="MU"><span>MUR</span> - Mauritian rupee</option>
+            <option value="MNT" data-iso="MN"><span>MNT</span> - Mongolian tugrik</option>
+            <option value="MMK" data-iso="MM"><span>MMK</span> - Myanma kyat</option>
+            <option value="XPF" data-iso="NC"><span>XPF</span> - CFP franc</option>
+            <option value="NOK" data-iso="NO"><span>NOK</span> - Norwegian krone</option>
+            <option value="PGK" data-iso="PG"><span>PGK</span> - Papua New Guinean kina</option>
+            <option value="EUR" data-iso="PT"><span>EUR</span> - European euro</option>
+            <option value="RWF" data-iso="RW"><span>RWF</span> - Rwandan franc</option>
+            <option value="WST" data-iso="WS"><span>WST</span> - Samoan tala</option>
+            <option value="RSD" data-iso="RS"><span>RSD</span> - Serbian dinar</option>
+            <option value="EUR" data-iso="SI"><span>EUR</span> - European euro</option>
+            <option value="EUR" data-iso="ES"><span>EUR</span> - European euro</option>
+            <option value="SEK" data-iso="SE"><span>SEK</span> - Swedish krona</option>
+            <option value="TZS" data-iso="TZ"><span>TZS</span> - Tanzanian shilling</option>
+            <option value="TND" data-iso="TN"><span>TND</span> - Tunisian dinar</option>
+            <option value="UAH" data-iso="UA"><span>UAH</span> - Ukrainian hryvnia</option>
+            <option value="UZS" data-iso="UZ"><span>UZS</span> - Uzbekistani som</option>
+            <option value="YER" data-iso="YE"><span>YER</span> - Yemeni rial</option>
+            <option value="DZD" data-iso="DZ"><span>DZD</span> - Algerian dinar</option>
+            <option value="ARS" data-iso="AR"><span>ARS</span> - Argentine peso</option>
+            <option value="AZN" data-iso="AZ"><span>AZN</span> - Azerbaijani manat</option>
+            <option value="BYN" data-iso="BY"><span>BYN</span> - New Belarusian ruble</option>
+            <option value="BOB" data-iso="BO"><span>BOB</span> - Bolivian boliviano</option>
+            <option value="BGN" data-iso="BG"><span>BGN</span> - Bulgarian lev</option>
+            <option value="CAD" data-iso="CA"><span>CAD</span> - Canadian dollar</option>
+            <option value="CNY" data-iso="CN"><span>CNY</span> - Chinese renminbi</option>
+            <option value="CRC" data-iso="CR"><span>CRC</span> - Costa Rican colon</option>
+            <option value="CZK" data-iso="CZ"><span>CZK</span> - Czech koruna</option>
+            <option value="USD" data-iso="EC"><span>USD</span> - U.S. Dollar</option>
+            <option value="EUR" data-iso="EE"><span>EUR</span> - European euro</option>
+            <option value="XPF" data-iso="PF"><span>XPF</span> - CFP franc</option>
+            <option value="GHS" data-iso="GH"><span>GHS</span> - Ghanaian cedi</option>
+            <option value="GNF" data-iso="GN"><span>GNF</span> - Guinean franc</option>
+            <option value="HKD" data-iso="HK"><span>HKD</span> - Hong Kong dollar</option>
+            <option value="IRR" data-iso="IR"><span>IRR</span> - Iranian rial</option>
+            <option value="JMD" data-iso="JM"><span>JMD</span> - Jamaican dollar</option>
+            <option value="AUD" data-iso="KI"><span>AUD</span> - Australian dollar</option>
+            <option value="LAK" data-iso="LA"><span>LAK</span> - Lao kip</option>
+            <option value="LYD" data-iso="LY"><span>LYD</span> - Libyan dinar</option>
+            <option value="MKD" data-iso="MK"><span>MKD</span> - Macedonian denar</option>
+            <option value="XOF" data-iso="ML"><span>XOF</span> - West African CFA franc</option>
+            <option value="USD" data-iso="FM"><span>USD</span> - U.S. Dollar</option>
+            <option value="XCD" data-iso="MS"><span>XCD</span> - East Caribbean dollar</option>
+            <option value="AUD" data-iso="NR"><span>AUD</span> - Australian dollar</option>
+            <option value="NIO" data-iso="NI"><span>NIO</span> - Nicaraguan cordoba</option>
+            <option value="PKR" data-iso="PK"><span>PKR</span> - Pakistani rupee</option>
+            <option value="PEN" data-iso="PE"><span>PEN</span> - Peruvian nuevo sol</option>
+            <option value="QAR" data-iso="QA"><span>QAR</span> - Qatari riyal</option>
+            <option value="XCD" data-iso="KN"><span>XCD</span> - East Caribbean dollar</option>
+            <option value="STD" data-iso="ST"><span>STD</span> - Sao Tome and Principe dobra</option>
+            <option value="SLL" data-iso="SL"><span>SLL</span> - Sierra Leonean leone</option>
+            <option value="SOS" data-iso="SO"><span>SOS</span> - Somali shilling</option>
+            <option value="SDG" data-iso="SD"><span>SDG</span> - Sudanese pound</option>
+            <option value="SYP" data-iso="SY"><span>SYP</span> - Syrian pound</option>
+            <option value="XOF" data-iso="TG"><span>XOF</span> - West African CFA franc</option>
+            <option value="TMT" data-iso="TM"><span>TMT</span> - Turkmenistan manat</option>
+            <option value="GBP" data-iso="GB"><span>GBP</span> - British pound</option>
+            <option value="VEF" data-iso="VE"><span>VEF</span> - Venezuelan bolivar</option>
+            <option value="EUR" data-iso="AD"><span>EUR</span> - European euro</option>
+            <option value="AMD" data-iso="AM"><span>AMD</span> - Armenian dram</option>
+            <option value="BSD" data-iso="BS"><span>BSD</span> - Bahamian dollar</option>
+            <option value="EUR" data-iso="BE"><span>EUR</span> - European euro</option>
+            <option value="BAM" data-iso="BA"><span>BAM</span> - Bosnia and Herzegovina konvertibilna marka</option>
+            <option value="XOF" data-iso="BF"><span>XOF</span> - West African CFA franc</option>
+            <option value="KYD" data-iso="KY"><span>KYD</span> - Cayman Islands dollar</option>
+            <option value="COP" data-iso="CO"><span>COP</span> - Colombian peso</option>
+            <option value="XOF" data-iso="CI"><span>XOF</span> - West African CFA franc</option>
+             <option value="DKK" data-iso="DK"><span>DKK</span> - Danish krone</option>
+             <option value="EGP" data-iso="EG"><span>EGP</span> - Egyptian pound</option>
+             <option value="ETB" data-iso="ET"><span>ETB</span> - Ethiopian birr</option>
+             <option value="XAF" data-iso="GA"><span>XAF</span> - Central African CFA franc</option>
+             <option value="GIP" data-iso="GI"><span>GIP</span> - Gibraltar pound</option>
+             <option value="XOF" data-iso="GW"><span>XOF</span> - West African CFA franc</option>
+             <option value="HUF" data-iso="HU"><span>HUF</span> - Hungarian forint</option>
+             <option value="IQD" data-iso="IQ"><span>IQD</span> - Iraqi dinar</option>
+             <option value="JPY" data-iso="JP"><span>JPY</span> - Japanese yen</option>
+             <option value="KPW" data-iso="KP"><span>KPW</span> - North Korean won</option>
+             <option value="LVL" data-iso="LV"><span>LVL</span> - Latvian lats</option>
+             <option value="CHF" data-iso="LI"><span>CHF</span> - Swiss Franc</option>
+             <option value="MGA" data-iso="MG"><span>MGA</span> - Malagasy ariary</option>
+             <option value="EUR" data-iso="MT"><span>EUR</span> - European Euro</option>
+             <option value="MDL" data-iso="MD"><span>MDL</span> - Moldovan leu</option>
+             <option value="MAD" data-iso="MA"><span>MAD</span> - Moroccan dirham</option>
+             <option value="NPR" data-iso="NP"><span>NPR</span> - Nepalese rupee</option>
+             <option value="XOF" data-iso="NE"><span>XOF</span> - West African CFA franc</option>
+             <option value="USD" data-iso="PW"><span>USD</span> - U.S. Dollar</option>
+             <option value="PHP" data-iso="PH"><span>PHP</span> - Philippine peso</option>
+             <option value="RON" data-iso="RO"><span>RON</span> - Romanian leu</option>
+             <option value="XCD" data-iso="LC"><span>XCD</span> - East Caribbean dollar</option>
+             <option value="SAR" data-iso="SA"><span>SAR</span> - Saudi riyal</option>
+             <option value="SGD" data-iso="SG"><span>SGD</span> - Singapore dollar</option>
+             <option value="ZAR" data-iso="ZA"><span>ZAR</span> - South African rand</option>
+             <option value="SRD" data-iso="SR"><span>SRD</span> - Surinamese dollar</option>
+             <option value="TWD" data-iso="TW"><span>TWD</span> - New Taiwan dollar</option>
+             <option value="TOP" data-iso="TO"><span>TOP</span> - Paanga</option>
+             <option value="AUD" data-iso="TV"><span>AUD</span> - Australian dollar</option>
+             <option value="USD" data-iso="US" selected><span>USD</span> - United States dollar</option>
+             <option value="VND" data-iso="VN"><span>VND</span> - Vietnamese dong</option>
+             <option value="ALL" data-iso="AL"><span>ALL</span> - Albanian lek</option>
+             <option value="XCD" data-iso="AG"><span>XCD</span> - East Caribbean dollar</option>
+             <option value="EUR" data-iso="AT"><span>EUR</span> - European euro</option>
+             <option value="BBD" data-iso="BB"><span>BBD</span> - Barbadian dollar</option>
+             <option value="BTN" data-iso="BT"><span>BTN</span> - Bhutanese ngultrum</option>
+             <option value="BND" data-iso="BN"><span>BND</span> - Brunei dollar</option>
+             <option value="XAF" data-iso="CM"><span>XAF</span> - Central African CFA franc</option>
+             <option value="CLP" data-iso="CL"><span>CLP</span> - Chilean peso</option>
+             <option value="CDF" data-iso="CD"><span>CDF</span> - Congolese franc</option>
+             <option value="EUR" data-iso="CY"><span>EUR</span> - European euro</option>
+             <option value="DOP" data-iso="DO"><span>DOP</span> - Dominican peso</option>
+             <option value="ERN" data-iso="ER"><span>ERN</span> - Eritrean nakfa</option>
+             <option value="EUR" data-iso="FR"><span>EUR</span> - European euro</option>
+             <option value="EUR" data-iso="DE"><span>EUR</span> - European euro</option>
+             <option value="GTQ" data-iso="GT"><span>GTQ</span> - Guatemalan quetzal</option>
+             <option value="HNL" data-iso="HN"><span>HNL</span> - Honduran lempira</option>
+             <option value="IDR" data-iso="ID"><span>IDR</span> - Indonesian rupiah</option>
+             <option value="EUR" data-iso="IT"><span>EUR</span> - European euro</option>
+             <option value="KES" data-iso="KE"><span>KES</span> - Kenyan shilling</option>
+             <option value="KGS" data-iso="KG"><span>KGS</span> - Kyrgyzstani som</option>
+             <option value="LRD" data-iso="LR"><span>LRD</span> - Liberian dollar</option>
+             <option value="MOP" data-iso="MO"><span>MOP</span> - Macanese pataca</option>
+             <option value="MVR" data-iso="MV"><span>MVR</span> - Maldivian rufiyaa</option>
+             <option value="MXN" data-iso="MX"><span>MXN</span> - Mexican peso</option>
+             <option value="EUR" data-iso="ME"><span>EUR</span> - European Euro</option>
+             <option value="NAD" data-iso="NA"><span>NAD</span> - Namibian dollar</option>
+             <option value="NZD" data-iso="NZ"><span>NZD</span> - New Zealand dollar</option>
+             <option value="OMR" data-iso="OM"><span>OMR</span> - Omani rial</option>
+             <option value="PYG" data-iso="PY"><span>PYG</span> - Paraguayan guarani</option>
+             <option value="USD" data-iso="PR"><span>USD</span> - U.S. Dollar</option>
+             <option value="SHP" data-iso="SH"><span>SHP</span> - Saint Helena pound</option>
+             <option value="EUR" data-iso="SM"><span>EUR</span> - European euro</option>
+             <option value="SCR" data-iso="SC"><span>SCR</span> - Seychellois rupee</option>
+             <option value="SBD" data-iso="SB"><span>SBD</span> - Solomon Islands dollar</option>
+             <option value="LKR" data-iso="LK"><span>LKR</span> - Sri Lankan rupee</option>
+             <option value="CHF" data-iso="CH"><span>CHF</span> - Swiss franc</option>
+             <option value="THB" data-iso="TH"><span>THB</span> - Thai baht</option>
+             <option value="TRY" data-iso="TR"><span>TRY</span> - Turkish new lira</option>
+             <option value="AED" data-iso="AE"><span>AED</span> - UAE dirham</option>
+             <option value="VUV" data-iso="VU"><span>VUV</span> - Vanuatu vatu</option>
+             <option value="ZMW" data-iso="ZM"><span>ZMW</span> - Zambian kwacha</option>
+             <option value="AOA" data-iso="AO"><span>AOA</span> - Angolan kwanza</option>
+             <option value="AWG" data-iso="AW"><span>AWG</span> - Aruban florin</option>
+             <option value="BHD" data-iso="BH"><span>BHD</span> - Bahraini dinar</option>
+             <option value="BZD" data-iso="BZ"><span>BZD</span> - Belize dollar</option>
+             <option value="BWP" data-iso="BW"><span>BWP</span> - Botswana pula</option>
+             <option value="BIF" data-iso="BI"><span>BIF</span> - Burundi franc</option>
+             <option value="XAF" data-iso="CF"><span>XAF</span> - Central African CFA franc</option>
+             <option value="KMF" data-iso="KM"><span>KMF</span> - Comorian franc</option>
+             <option value="HRK" data-iso="HR"><span>HRK</span> - Croatian kuna</option>
+             <option value="DJF" data-iso="DJ"><span>DJF</span> - Djiboutian franc</option>
+             <option value="USD" data-iso="SV"><span>USD</span> - U.S. Dollar</option>
+             <option value="FJD" data-iso="FJ"><span>FJD</span> - Fijian dollar</option>
+             <option value="GMD" data-iso="GM"><span>GMD</span> - Gambian dalasi</option>
+             <option value="EUR" data-iso="GR"><span>EUR</span> - European euro</option>
+             <option value="GYD" data-iso="GY"><span>GYD</span> - Guyanese dollar</option>
+             <option value="ISK" data-iso="IS"><span>ISK</span> - Icelandic króna</option>
+             <option value="EUR" data-iso="IE"><span>EUR</span> - European euro</option>
+             <option value="JOD" data-iso="JO"><span>JOD</span> - Jordanian dinar</option>
+             <option value="KRW" data-iso="KR"><span>KRW</span> - South Korean won</option>
+             <option value="LBP" data-iso="LB"><span>LBP</span> - Lebanese lira</option>
+             <option value="MWK" data-iso="MW"><span>MWK</span> - Malawian kwacha</option>
+             <option value="MRO" data-iso="MR"><span>MRO</span> - Mauritanian ouguiya</option>
+             <option value="EUR" data-iso="MC"><span>EUR</span> - European Euro</option>
+             <option value="MZN" data-iso="MZ"><span>MZN</span> - Mozambican metical</option>
+             <option value="EUR" data-iso="NL"><span>EUR</span> - European euro</option>
+             <option value="NGN" data-iso="NG"><span>NGN</span> - Nigerian naira</option>
+             <option value="PAB" data-iso="PA"><span>PAB</span> - Panamanian balboa</option>
+             <option value="PLN" data-iso="PL"><span>PLN</span> - Polish zloty</option>
+             <option value="RUB" data-iso="RU"><span>RUB</span> - Russian ruble</option>
+             <option value="XCD" data-iso="VC"><span>XCD</span> - East Caribbean dollar</option>
+             <option value="XOF" data-iso="SN"><span>XOF</span> - West African CFA franc</option>
+             <option value="EUR" data-iso="SK"><span>EUR</span> - European euro</option>
+             <option value="SDG" data-iso="SS"><span>SDG</span> - Sudanese pound</option>
+             <option value="SZL" data-iso="SZ"><span>SZL</span> - Swazi lilangeni</option>
+             <option value="TJS" data-iso="TJ"><span>TJS</span> - Tajikistani somoni</option>
+             <option value="TTD" data-iso="TT"><span>TTD</span> - Trinidad and Tobago dollar</option>
+             <option value="UGX" data-iso="UG"><span>UGX</span> - Ugandan shilling</option>
+             <option value="UYU" data-iso="UY"><span>UYU</span> - Uruguayan peso</option>
+             <option value="XPF" data-iso="WF"><span>XPF</span> - CFP franc</option>
+             <option value="EUR" data-iso="LT"><span>EUR</span> - European euro</option>
+            </select>
+          <input type="submit" id="convertbtn" name="convertbtn" value="Convert">
+       
+      </div>
+      <p class="tagline">Online currency converter</p>
+      <p> created by Ekpang Michael</p>
+    </div>
+  </div>
+ 
+ 
+  <div id="footer">
+    <div id="footer-content">
+      
+      <p><a href="#">Currency Converter by Ekpang Michael</a>.</p>
+    </div>
+  </div>
+  <script src="libs/jquery.min.js"></script>
+  <script src="js/select2.min.js"></script>
+  <script src="js/collapsible.js"></script>
+  <script src="js/promise.js"></script>
+   <script src="js/fetch.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+  
+     $(document).ready(() => {
+  $("#cfrom").select2({
+    formatResult: format,
+    formatSelection: format,
+  });
+  $("#cto").select2({
+    formatResult: format,
+    formatSelection: format,
+  });
+});
+function format(currency) {
+  const originalOption = currency.element;
+  if($(originalOption).prop("tagName") == "OPTION")
+    return `<img src='img/flags/${$(originalOption).data('iso')}.png' />${currency.text}`;
+  else
+    return currency.text;
+}
+    
+      
+
+
+
+const button = document.querySelector('#convertbtn');
+const amount= document.querySelector('#camount');
+const cfrom = document.querySelector('#cfrom');
+const cto = document.querySelector('#cto');
+const result = document.querySelector('#result');
+
+
+//submit button
+button.addEventListener('click', () => {
+  const query = `${cfrom.value}_${cto.value}`;
+  getcurrency(query, amount.value);
+});
+
+// function to convert currenct
+async function getcurrency(query, amount) {
+  const URL = `https://free.currencyconverterapi.com/api/v5/convert?q=${query}&compact=ultra`;
+  let networkData = false;
+  result.innerHTML = "Converting...";
+  try {
+    const fetchResult = fetch(
+      new Request(URL,
+         { method: 'GET', cache: 'reload' 
+        }));
+    const response = await fetchResult;
+   
+    if (response.ok) {
+      const jsonData = await response.json();
+      //console.log(Object.entries(jsonData)[0][1]);
+      result.innerHTML = renderList(jsonData, amount);
+      networkData = true;
+      console.log("from network");
+    } else {
+      result.innerHTML = `Response.status: ${response.status}`;
+    }
+  } catch (e) {
+    result.innerHTML = e;
+  }
+
+//check if cache
+if('caches' in window){
+    caches.match(URL)
+    .then(response => {
+        if(response){
+            return response.json();
+        }
+    })
+    .then(data => {
+        if(!networkData){
+        result.innerHTML = renderList(data, amount);
+        console.log("from cache");
+    }
+    });
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//function to display the result
+function renderList(json, amount) {
+  const cresult = Object.entries(json)[0][1];
+
+const converted = cresult * amount;
+const total = Math.round(converted * 1000)/1000;
+
+  return `${total} ${cto.value}`;
+}
+    </script>
+</body>
+</html>
