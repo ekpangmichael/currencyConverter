@@ -1,4 +1,4 @@
-const STATIC_CACHE_NAME = 'static-v14';
+const STATIC_CACHE_NAME = 'static-v15';
 const DYNAMIC_CACHE_NAME = 'dynamic2';
 const STATIC_ASSETS = [
 			'./',
@@ -6,8 +6,8 @@ const STATIC_ASSETS = [
 			'css/flags.css',
 			'css/select2.css',
 			'css/styles.css',
-			'http://fonts.googleapis.com/css?family=Open+Sans:400,600,700',
-			'http://fonts.googleapis.com/css?family=Glegoo',
+			'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700',
+			'https://fonts.googleapis.com/css?family=Glegoo',
 			'img/header-bg.png',
 			'js/app.js',
 			'js/collapsible.js',
